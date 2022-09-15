@@ -51,7 +51,7 @@ defmodule PetalComponents.Alert do
 
             <%= if @close_button_properties do %>
               <button class={build_class(["p-2 mouse-hover flex hover:rounded", get_dismiss_icon_classes(@color)])} {@close_button_properties}>
-                <Heroicons.Solid.x class="self-start w-4 h-4" />
+                <Heroicons.Solid.x_mark class="self-start w-4 h-4" />
               </button>
             <% end %>
           </div>
