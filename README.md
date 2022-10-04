@@ -1,4 +1,4 @@
-![Moss Piglet icon logo](logo.png)
+![Moss Piglet icon logo](logo_hz.png)
 <p align="center">
   
   <h1 align="center">Heroicons Render</h1>
