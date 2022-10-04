@@ -2,14 +2,6 @@ defmodule HeroiconsRender.HeroiconsV2.Outline do
   @moduledoc """
   Icon name can be the function or passed in as a type eg.
 
-      <HeroiconsRender.HeroiconsV2.Solid.home class="w-6 h-6" />
-      <HeroiconsRender.HeroiconsV2.Solid.home title="Optional title for accessibility" class="w-6 h-6" />
-      <HeroiconsRender.HeroiconsV2.Solid.render icon="home" class="w-6 h-6" />
-
-      <HeroiconsRender.HeroiconsV2.Mini.Solid.home class="w-5 h-5" />
-      <HeroiconsRender.HeroiconsV2.Mini.Solid.home title="Optional title for accessibility" class="w-5 h-5" />
-      <HeroiconsRender.HeroiconsV2.Mini.Solid.render icon="home" class="w-5 h-5" />
-
       <HeroiconsRender.HeroiconsV2.Outline.home class="w-6 h-6" />
       <HeroiconsRender.HeroiconsV2.Outline.home title="Optional title for accessibility" class="w-6 h-6" />
       <HeroiconsRender.HeroiconsV2.Outline.render icon="home" class="w-6 h-6" />
