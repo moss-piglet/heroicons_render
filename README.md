@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="priv/static/assets/images/logo.png" height="128" />
+  <img src="priv/static/assets/images/logo.png?raw=true" height="128" />
   
   <h1 align="center">Heroicons Render</h1>
   
