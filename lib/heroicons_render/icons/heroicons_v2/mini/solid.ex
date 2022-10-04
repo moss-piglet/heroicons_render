@@ -1,4 +1,4 @@
-defmodule HeroiconsRender.Heroicons.Mini.Solid do
+defmodule HeroiconsRender.HeroiconsV2.Mini.Solid do
   @moduledoc """
   Icon name can be the function or passed in as a type eg.
 

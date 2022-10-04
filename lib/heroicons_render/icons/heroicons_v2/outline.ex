@@ -1,4 +1,4 @@
-defmodule HeroiconsRender.Heroicons.Outline do
+defmodule HeroiconsRender.HeroiconsV2.Outline do
   @moduledoc """
   Icon name can be the function or passed in as a type eg.
 

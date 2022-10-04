@@ -20,7 +20,7 @@ defmodule Mix.Tasks.Heroicons.Generate do
 
   defp loop_directory(folder) do
     src_path = "./heroicons/optimized/#{Enum.at(folder, 0)}/"
-    namespace = "Heroicons.#{Enum.at(folder, 1)}"
+    namespace = "HeroiconsV2.#{Enum.at(folder, 1)}"
 
     file_content = """
     defmodule HeroiconsRender.#{namespace} do
