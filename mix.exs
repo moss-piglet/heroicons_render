@@ -60,6 +60,7 @@ defmodule HeroiconsRender.MixProject do
 
   defp package do
     [
+      name: "heroicons_render",
       maintainers: ["f0rest8"],
       licenses: ["MIT"],
       links: %{"GitHub" => @source_url}
