@@ -4,6 +4,7 @@
 
 - Update to LiveView 0.18
 - Update Readme
+- Update generator namespace
 
 ### 0.1.0 - 2022-10-04
 
