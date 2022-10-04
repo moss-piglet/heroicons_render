@@ -1,18 +1,18 @@
-defmodule HeroiconsRender.HeroiconsV2.Outline do
+defmodule HeroiconsRender.Heroicons.Outline do
   @moduledoc """
   Icon name can be the function or passed in as a type eg.
 
-      <HeroiconsRender.Heroicons.Solid.home class="w-6 h-6" />
-      <HeroiconsRender.Heroicons.Solid.home title="Optional title for accessibility" class="w-6 h-6" />
-      <HeroiconsRender.Heroicons.Solid.render icon="home" class="w-6 h-6" />
+      <HeroiconsRender.HeroiconsV2.Solid.home class="w-6 h-6" />
+      <HeroiconsRender.HeroiconsV2.Solid.home title="Optional title for accessibility" class="w-6 h-6" />
+      <HeroiconsRender.HeroiconsV2.Solid.render icon="home" class="w-6 h-6" />
 
-      <HeroiconsRender.Heroicons.Mini.Solid.home class="w-5 h-5" />
-      <HeroiconsRender.Heroicons.Mini.Solid.home title="Optional title for accessibility" class="w-5 h-5" />
-      <HeroiconsRender.Heroicons.Mini.Solid.render icon="home" class="w-5 h-5" />
+      <HeroiconsRender.HeroiconsV2.Mini.Solid.home class="w-5 h-5" />
+      <HeroiconsRender.HeroiconsV2.Mini.Solid.home title="Optional title for accessibility" class="w-5 h-5" />
+      <HeroiconsRender.HeroiconsV2.Mini.Solid.render icon="home" class="w-5 h-5" />
 
-      <HeroiconsRender.Heroicons.Outline.home class="w-6 h-6" />
-      <HeroiconsRender.Heroicons.Outline.home title="Optional title for accessibility" class="w-6 h-6" />
-      <HeroiconsRender.Heroicons.Outline.render icon="home" class="w-6 h-6" />
+      <HeroiconsRender.HeroiconsV2.Outline.home class="w-6 h-6" />
+      <HeroiconsRender.HeroiconsV2.Outline.home title="Optional title for accessibility" class="w-6 h-6" />
+      <HeroiconsRender.HeroiconsV2.Outline.render icon="home" class="w-6 h-6" />
   """
   use Phoenix.Component
 
@@ -1434,6 +1434,25 @@ defmodule HeroiconsRender.HeroiconsV2.Outline do
     <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
       <Svg.title title={@title} />
       <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z"/>
+    </svg>
+    """
+  end
+
+  def bug_ant(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 12.75c1.148 0 2.278.08 3.383.237 1.037.146 1.866.966 1.866 2.013 0 3.728-2.35 6.75-5.25 6.75S6.75 18.728 6.75 15c0-1.046.83-1.867 1.866-2.013A24.204 24.204 0 0112 12.75zm0 0c2.883 0 5.647.508 8.207 1.44a23.91 23.91 0 01-1.152 6.06M12 12.75c-2.883 0-5.647.508-8.208 1.44.125 2.104.52 4.136 1.153 6.06M12 12.75a2.25 2.25 0 002.248-2.354M12 12.75a2.25 2.25 0 01-2.248-2.354M12 8.25c.995 0 1.971-.08 2.922-.236.403-.066.74-.358.795-.762a3.778 3.778 0 00-.399-2.25M12 8.25c-.995 0-1.97-.08-2.922-.236-.402-.066-.74-.358-.795-.762a3.734 3.734 0 01.4-2.253M12 8.25a2.25 2.25 0 00-2.248 2.146M12 8.25a2.25 2.25 0 012.248 2.146M8.683 5a6.032 6.032 0 01-1.155-1.002c.07-.63.27-1.222.574-1.747m.581 2.749A3.75 3.75 0 0115.318 5m0 0c.427-.283.815-.62 1.155-.999a4.471 4.471 0 00-.575-1.752M4.921 6a24.048 24.048 0 00-.392 3.314c1.668.546 3.416.914 5.223 1.082M19.08 6c.205 1.08.337 2.187.392 3.314a23.882 23.882 0 01-5.223 1.082"/>
     </svg>
     """
   end
@@ -2924,6 +2943,25 @@ defmodule HeroiconsRender.HeroiconsV2.Outline do
     """
   end
 
+  def eye_dropper(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l1.5 1.5.75-.75V8.758l2.276-.61a3 3 0 10-3.675-3.675l-.61 2.277H12l-.75.75 1.5 1.5M15 11.25l-8.47 8.47c-.34.34-.8.53-1.28.53s-.94.19-1.28.53l-.97.97-.75-.75.97-.97c.34-.34.53-.8.53-1.28s.19-.94.53-1.28L12.75 9M15 11.25L12.75 9"/>
+    </svg>
+    """
+  end
+
   def eye_slash(assigns) do
     assigns =
       assigns
@@ -4067,6 +4105,25 @@ defmodule HeroiconsRender.HeroiconsV2.Outline do
     """
   end
 
+  def pause_circle(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9v6m-4.5 0V9M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    </svg>
+    """
+  end
+
   def pause(assigns) do
     assigns =
       assigns
@@ -4219,6 +4276,26 @@ defmodule HeroiconsRender.HeroiconsV2.Outline do
     """
   end
 
+  def play_circle(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z"/>
+    </svg>
+    """
+  end
+
   def play_pause(assigns) do
     assigns =
       assigns
@@ -4310,6 +4387,25 @@ defmodule HeroiconsRender.HeroiconsV2.Outline do
     <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
       <Svg.title title={@title} />
       <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+    </svg>
+    """
+  end
+
+  def power(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9"/>
     </svg>
     """
   end
@@ -4539,6 +4635,25 @@ defmodule HeroiconsRender.HeroiconsV2.Outline do
     <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
       <Svg.title title={@title} />
       <path stroke-linecap="round" stroke-linejoin="round" d="M6 6.878V6a2.25 2.25 0 012.25-2.25h7.5A2.25 2.25 0 0118 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 004.5 9v.878m13.5-3A2.25 2.25 0 0119.5 9v.878m0 0a2.246 2.246 0 00-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0121 12v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6c0-.98.626-1.813 1.5-2.122"/>
+    </svg>
+    """
+  end
+
+  def rocket_launch(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
     </svg>
     """
   end
@@ -4847,6 +4962,25 @@ defmodule HeroiconsRender.HeroiconsV2.Outline do
     """
   end
 
+  def square_3_stack_3d(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"/>
+    </svg>
+    """
+  end
+
   def squares_2x2(assigns) do
     assigns =
       assigns
@@ -4900,6 +5034,26 @@ defmodule HeroiconsRender.HeroiconsV2.Outline do
     <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
       <Svg.title title={@title} />
       <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/>
+    </svg>
+    """
+  end
+
+  def stop_circle(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z"/>
     </svg>
     """
   end
@@ -5038,6 +5192,25 @@ defmodule HeroiconsRender.HeroiconsV2.Outline do
     """
   end
 
+  def trophy(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0"/>
+    </svg>
+    """
+  end
+
   def truck(assigns) do
     assigns =
       assigns
@@ -5053,6 +5226,25 @@ defmodule HeroiconsRender.HeroiconsV2.Outline do
     <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
       <Svg.title title={@title} />
       <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/>
+    </svg>
+    """
+  end
+
+  def tv(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 20.25h12m-7.5-3v3m3-3v3m-10.125-3h17.25c.621 0 1.125-.504 1.125-1.125V4.875c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125z"/>
     </svg>
     """
   end
@@ -5247,6 +5439,25 @@ defmodule HeroiconsRender.HeroiconsV2.Outline do
     """
   end
 
+  def viewfinder_circle(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.75H6A2.25 2.25 0 003.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0120.25 6v1.5m0 9V18A2.25 2.25 0 0118 20.25h-1.5m-9 0H6A2.25 2.25 0 013.75 18v-1.5M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+    </svg>
+    """
+  end
+
   def wallet(assigns) do
     assigns =
       assigns
@@ -5281,6 +5492,25 @@ defmodule HeroiconsRender.HeroiconsV2.Outline do
     <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
       <Svg.title title={@title} />
       <path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z"/>
+    </svg>
+    """
+  end
+
+  def window(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zM7.5 6h.008v.008H7.5V6zm2.25 0h.008v.008H9.75V6z"/>
     </svg>
     """
   end

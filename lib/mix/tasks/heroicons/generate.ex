@@ -77,17 +77,17 @@ defmodule Mix.Tasks.Heroicons.Generate do
         """
 
     dest_dir = Enum.at(folder, 2)
-    dest_path = "./lib/petal_components/icons/heroicons/#{dest_dir}.ex"
+    dest_path = "./lib/heroicons_render/icons/heroicons_v2/#{dest_dir}.ex"
 
     unless File.exists?(dest_path) do
       case dest_dir do
         "mini/solid" ->
           File.mkdir_p(
-            "./lib/petal_components/icons/heroicons/#{Enum.at(String.split(dest_dir, "/"), 0)}"
+            "./lib/heroicons_render/icons/heroicons_v2/#{Enum.at(String.split(dest_dir, "/"), 0)}"
           )
 
         _rest ->
-          File.mkdir_p("./lib/petal_components/icons/heroicons/")
+          File.mkdir_p("./lib/heroicons_render/icons/heroicons_v2/")
       end
     end
 

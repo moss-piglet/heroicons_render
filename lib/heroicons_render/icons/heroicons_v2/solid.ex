@@ -1,18 +1,18 @@
-defmodule HeroiconsRender.HeroiconsV2.Solid do
+defmodule HeroiconsRender.Heroicons.Solid do
   @moduledoc """
   Icon name can be the function or passed in as a type eg.
 
-      <HeroiconsRender.Heroicons.Solid.home class="w-6 h-6" />
-      <HeroiconsRender.Heroicons.Solid.home title="Optional title for accessibility" class="w-6 h-6" />
-      <HeroiconsRender.Heroicons.Solid.render icon="home" class="w-6 h-6" />
+      <HeroiconsRender.HeroiconsV2.Solid.home class="w-6 h-6" />
+      <HeroiconsRender.HeroiconsV2.Solid.home title="Optional title for accessibility" class="w-6 h-6" />
+      <HeroiconsRender.HeroiconsV2.Solid.render icon="home" class="w-6 h-6" />
 
-      <HeroiconsRender.Heroicons.Mini.Solid.home class="w-5 h-5" />
-      <HeroiconsRender.Heroicons.Mini.Solid.home title="Optional title for accessibility" class="w-5 h-5" />
-      <HeroiconsRender.Heroicons.Mini.Solid.render icon="home" class="w-5 h-5" />
+      <HeroiconsRender.HeroiconsV2.Mini.Solid.home class="w-5 h-5" />
+      <HeroiconsRender.HeroiconsV2.Mini.Solid.home title="Optional title for accessibility" class="w-5 h-5" />
+      <HeroiconsRender.HeroiconsV2.Mini.Solid.render icon="home" class="w-5 h-5" />
 
-      <HeroiconsRender.Heroicons.Outline.home class="w-6 h-6" />
-      <HeroiconsRender.Heroicons.Outline.home title="Optional title for accessibility" class="w-6 h-6" />
-      <HeroiconsRender.Heroicons.Outline.render icon="home" class="w-6 h-6" />
+      <HeroiconsRender.HeroiconsV2.Outline.home class="w-6 h-6" />
+      <HeroiconsRender.HeroiconsV2.Outline.home title="Optional title for accessibility" class="w-6 h-6" />
+      <HeroiconsRender.HeroiconsV2.Outline.render icon="home" class="w-6 h-6" />
   """
   use Phoenix.Component
 
@@ -1447,6 +1447,25 @@ defmodule HeroiconsRender.HeroiconsV2.Solid do
       <Svg.title title={@title} />
       <path fill-rule="evenodd" d="M7.5 5.25a3 3 0 013-3h3a3 3 0 013 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0112 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 017.5 5.455V5.25zm7.5 0v.09a49.488 49.488 0 00-6 0v-.09a1.5 1.5 0 011.5-1.5h3a1.5 1.5 0 011.5 1.5zm-3 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd"/>
       <path d="M3 18.4v-2.796a4.3 4.3 0 00.713.31A26.226 26.226 0 0012 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 01-6.477-.427C4.047 21.128 3 19.852 3 18.4z"/>
+    </svg>
+    """
+  end
+
+  def bug_ant(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path fill-rule="evenodd" d="M8.478 1.6a.75.75 0 01.273 1.025 3.72 3.72 0 00-.425 1.122c.058.057.118.114.18.168A4.491 4.491 0 0112 2.25c1.413 0 2.673.651 3.497 1.668.06-.054.12-.11.178-.167a3.717 3.717 0 00-.426-1.126.75.75 0 111.298-.75 5.22 5.22 0 01.671 2.045.75.75 0 01-.187.582c-.241.27-.505.52-.787.749a4.495 4.495 0 01.216 2.1c-.106.792-.753 1.295-1.417 1.403-.182.03-.364.057-.547.081.152.227.273.476.359.741a23.122 23.122 0 003.832-.802 23.241 23.241 0 00-.345-2.634.75.75 0 011.474-.28c.21 1.115.348 2.256.404 3.418a.75.75 0 01-.516.749c-1.527.5-3.119.855-4.76 1.05-.074.38-.22.735-.423 1.05a24.61 24.61 0 015.943 1.358.75.75 0 01.492.75 24.665 24.665 0 01-1.189 6.25.75.75 0 01-1.425-.47 23.141 23.141 0 001.077-5.307c-.5-.168-1.009-.32-1.524-.454.068.234.104.484.104.746 0 3.956-2.521 7.5-6 7.5-3.478 0-6-3.544-6-7.5 0-.262.037-.511.104-.746-.514.134-1.022.286-1.522.454a23.14 23.14 0 001.077 5.308.75.75 0 01-1.425.468 24.663 24.663 0 01-1.19-6.25.75.75 0 01.493-.749 24.593 24.593 0 014.964-1.24h.01c.321-.046.644-.085.969-.118a2.982 2.982 0 01-.424-1.05 24.614 24.614 0 01-4.76-1.05.75.75 0 01-.516-.75c.057-1.161.194-2.302.405-3.417a.75.75 0 011.474.28c-.164.862-.28 1.74-.345 2.634 1.237.37 2.517.641 3.832.802.085-.265.207-.514.359-.74a18.732 18.732 0 01-.547-.082c-.664-.108-1.311-.611-1.417-1.403a4.535 4.535 0 01.217-2.103 6.788 6.788 0 01-.788-.751.75.75 0 01-.187-.583 5.22 5.22 0 01.67-2.04.75.75 0 011.026-.273z" clip-rule="evenodd"/>
     </svg>
     """
   end
@@ -2966,6 +2985,25 @@ defmodule HeroiconsRender.HeroiconsV2.Solid do
     """
   end
 
+  def eye_dropper(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path fill-rule="evenodd" d="M16.098 2.598a3.75 3.75 0 113.622 6.275l-1.72.46V12a.75.75 0 01-.22.53l-.75.75a.75.75 0 01-1.06 0l-.97-.97-7.94 7.94a2.56 2.56 0 01-1.81.75 1.06 1.06 0 00-.75.31l-.97.97a.75.75 0 01-1.06 0l-.75-.75a.75.75 0 010-1.06l.97-.97a1.06 1.06 0 00.31-.75c0-.68.27-1.33.75-1.81L11.69 9l-.97-.97a.75.75 0 010-1.06l.75-.75A.75.75 0 0112 6h2.666l.461-1.72c.165-.617.49-1.2.971-1.682zm-3.348 7.463L4.81 18a1.06 1.06 0 00-.31.75c0 .318-.06.63-.172.922a2.56 2.56 0 01.922-.172c.281 0 .551-.112.75-.31l7.94-7.94-1.19-1.19z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
   def eye_slash(assigns) do
     assigns =
       assigns
@@ -4119,6 +4157,25 @@ defmodule HeroiconsRender.HeroiconsV2.Solid do
     """
   end
 
+  def pause_circle(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zM9 8.25a.75.75 0 00-.75.75v6c0 .414.336.75.75.75h.75a.75.75 0 00.75-.75V9a.75.75 0 00-.75-.75H9zm5.25 0a.75.75 0 00-.75.75v6c0 .414.336.75.75.75H15a.75.75 0 00.75-.75V9a.75.75 0 00-.75-.75h-.75z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
   def pause(assigns) do
     assigns =
       assigns
@@ -4274,6 +4331,25 @@ defmodule HeroiconsRender.HeroiconsV2.Solid do
     """
   end
 
+  def play_circle(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
   def play_pause(assigns) do
     assigns =
       assigns
@@ -4365,6 +4441,25 @@ defmodule HeroiconsRender.HeroiconsV2.Solid do
     <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <Svg.title title={@title} />
       <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def power(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v9a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.166 5.106a.75.75 0 010 1.06 8.25 8.25 0 1011.668 0 .75.75 0 111.06-1.06c3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788a.75.75 0 011.06 0z" clip-rule="evenodd"/>
     </svg>
     """
   end
@@ -4593,6 +4688,26 @@ defmodule HeroiconsRender.HeroiconsV2.Solid do
     <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <Svg.title title={@title} />
       <path d="M5.566 4.657A4.505 4.505 0 016.75 4.5h10.5c.41 0 .806.055 1.183.157A3 3 0 0015.75 3h-7.5a3 3 0 00-2.684 1.657zM2.25 12a3 3 0 013-3h13.5a3 3 0 013 3v6a3 3 0 01-3 3H5.25a3 3 0 01-3-3v-6zM5.25 7.5c-.41 0-.806.055-1.184.157A3 3 0 016.75 6h10.5a3 3 0 012.683 1.657A4.505 4.505 0 0018.75 7.5H5.25z"/>
+    </svg>
+    """
+  end
+
+  def rocket_launch(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd"/>
+      <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z"/>
     </svg>
     """
   end
@@ -4906,6 +5021,27 @@ defmodule HeroiconsRender.HeroiconsV2.Solid do
     """
   end
 
+  def square_3_stack_3d(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path d="M11.644 1.59a.75.75 0 01.712 0l9.75 5.25a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.712 0l-9.75-5.25a.75.75 0 010-1.32l9.75-5.25z"/>
+      <path d="M3.265 10.602l7.668 4.129a2.25 2.25 0 002.134 0l7.668-4.13 1.37.739a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.71 0l-9.75-5.25a.75.75 0 010-1.32l1.37-.738z"/>
+      <path d="M10.933 19.231l-7.668-4.13-1.37.739a.75.75 0 000 1.32l9.75 5.25c.221.12.489.12.71 0l9.75-5.25a.75.75 0 000-1.32l-1.37-.738-7.668 4.13a2.25 2.25 0 01-2.134-.001z"/>
+    </svg>
+    """
+  end
+
   def squares_2x2(assigns) do
     assigns =
       assigns
@@ -4959,6 +5095,25 @@ defmodule HeroiconsRender.HeroiconsV2.Solid do
     <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <Svg.title title={@title} />
       <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def stop_circle(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm6-2.438c0-.724.588-1.312 1.313-1.312h4.874c.725 0 1.313.588 1.313 1.313v4.874c0 .725-.588 1.313-1.313 1.313H9.564a1.312 1.312 0 01-1.313-1.313V9.564z" clip-rule="evenodd"/>
     </svg>
     """
   end
@@ -5097,6 +5252,25 @@ defmodule HeroiconsRender.HeroiconsV2.Solid do
     """
   end
 
+  def trophy(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path fill-rule="evenodd" d="M5.166 2.621v.858c-1.035.148-2.059.33-3.071.543a.75.75 0 00-.584.859 6.753 6.753 0 006.138 5.6 6.73 6.73 0 002.743 1.346A6.707 6.707 0 019.279 15H8.54c-1.036 0-1.875.84-1.875 1.875V19.5h-.75a2.25 2.25 0 00-2.25 2.25c0 .414.336.75.75.75h15a.75.75 0 00.75-.75 2.25 2.25 0 00-2.25-2.25h-.75v-2.625c0-1.036-.84-1.875-1.875-1.875h-.739a6.706 6.706 0 01-1.112-3.173 6.73 6.73 0 002.743-1.347 6.753 6.753 0 006.139-5.6.75.75 0 00-.585-.858 47.077 47.077 0 00-3.07-.543V2.62a.75.75 0 00-.658-.744 49.22 49.22 0 00-6.093-.377c-2.063 0-4.096.128-6.093.377a.75.75 0 00-.657.744zm0 2.629c0 1.196.312 2.32.857 3.294A5.266 5.266 0 013.16 5.337a45.6 45.6 0 012.006-.343v.256zm13.5 0v-.256c.674.1 1.343.214 2.006.343a5.265 5.265 0 01-2.863 3.207 6.72 6.72 0 00.857-3.294z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
   def truck(assigns) do
     assigns =
       assigns
@@ -5114,6 +5288,26 @@ defmodule HeroiconsRender.HeroiconsV2.Solid do
       <path d="M3.375 4.5C2.339 4.5 1.5 5.34 1.5 6.375V13.5h12V6.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM13.5 15h-12v2.625c0 1.035.84 1.875 1.875 1.875h.375a3 3 0 116 0h3a.75.75 0 00.75-.75V15z"/>
       <path d="M8.25 19.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0zM15.75 6.75a.75.75 0 00-.75.75v11.25c0 .087.015.17.042.248a3 3 0 015.958.464c.853-.175 1.522-.935 1.464-1.883a18.659 18.659 0 00-3.732-10.104 1.837 1.837 0 00-1.47-.725H15.75z"/>
       <path d="M19.5 19.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z"/>
+    </svg>
+    """
+  end
+
+  def tv(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path d="M19.5 6h-15v9h15V6z"/>
+      <path fill-rule="evenodd" d="M3.375 3C2.339 3 1.5 3.84 1.5 4.875v11.25C1.5 17.16 2.34 18 3.375 18H9.75v1.5H6A.75.75 0 006 21h12a.75.75 0 000-1.5h-3.75V18h6.375c1.035 0 1.875-.84 1.875-1.875V4.875C22.5 3.839 21.66 3 20.625 3H3.375zm0 13.5h17.25a.375.375 0 00.375-.375V4.875a.375.375 0 00-.375-.375H3.375A.375.375 0 003 4.875v11.25c0 .207.168.375.375.375z" clip-rule="evenodd"/>
     </svg>
     """
   end
@@ -5309,6 +5503,25 @@ defmodule HeroiconsRender.HeroiconsV2.Solid do
     """
   end
 
+  def viewfinder_circle(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path d="M6 3a3 3 0 00-3 3v1.5a.75.75 0 001.5 0V6A1.5 1.5 0 016 4.5h1.5a.75.75 0 000-1.5H6zM16.5 3a.75.75 0 000 1.5H18A1.5 1.5 0 0119.5 6v1.5a.75.75 0 001.5 0V6a3 3 0 00-3-3h-1.5zM12 8.25a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zM4.5 16.5a.75.75 0 00-1.5 0V18a3 3 0 003 3h1.5a.75.75 0 000-1.5H6A1.5 1.5 0 014.5 18v-1.5zM21 16.5a.75.75 0 00-1.5 0V18a1.5 1.5 0 01-1.5 1.5h-1.5a.75.75 0 000 1.5H18a3 3 0 003-3v-1.5z"/>
+    </svg>
+    """
+  end
+
   def wallet(assigns) do
     assigns =
       assigns
@@ -5343,6 +5556,25 @@ defmodule HeroiconsRender.HeroiconsV2.Solid do
     <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <Svg.title title={@title} />
       <path fill-rule="evenodd" d="M1.371 8.143c5.858-5.857 15.356-5.857 21.213 0a.75.75 0 010 1.061l-.53.53a.75.75 0 01-1.06 0c-4.98-4.979-13.053-4.979-18.032 0a.75.75 0 01-1.06 0l-.53-.53a.75.75 0 010-1.06zm3.182 3.182c4.1-4.1 10.749-4.1 14.85 0a.75.75 0 010 1.061l-.53.53a.75.75 0 01-1.062 0 8.25 8.25 0 00-11.667 0 .75.75 0 01-1.06 0l-.53-.53a.75.75 0 010-1.06zm3.204 3.182a6 6 0 018.486 0 .75.75 0 010 1.061l-.53.53a.75.75 0 01-1.061 0 3.75 3.75 0 00-5.304 0 .75.75 0 01-1.06 0l-.53-.53a.75.75 0 010-1.06zm3.182 3.182a1.5 1.5 0 012.122 0 .75.75 0 010 1.061l-.53.53a.75.75 0 01-1.061 0l-.53-.53a.75.75 0 010-1.06z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def window(assigns) do
+    assigns =
+      assigns
+      |> assign_new(:title, fn -> nil end)
+      |> assign_new(:class, fn -> "h-6 w-6" end)
+      |> assign_new(:rest, fn ->
+        assigns_to_attributes(assigns, ~w(
+        class
+      )a)
+      end)
+
+    ~H"""
+    <svg class={@class} {@rest} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <Svg.title title={@title} />
+      <path fill-rule="evenodd" d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm18 3H3.75v9a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V9zm-15-3.75A.75.75 0 004.5 6v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V6a.75.75 0 00-.75-.75H5.25zm1.5.75a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H7.5a.75.75 0 01-.75-.75V6zm3-.75A.75.75 0 009 6v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V6a.75.75 0 00-.75-.75H9.75z" clip-rule="evenodd"/>
     </svg>
     """
   end
