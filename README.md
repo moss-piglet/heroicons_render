@@ -2,6 +2,18 @@
 <img src="https://res.cloudinary.com/metamorphic/image/upload/v1664900186/Logo/MossPiglet_Horizontal_OnLight_zszpdn.png" alt="Moss Piglet logo" />
 
 ## Heroicons Render
+
+<p align="center">
+  <a href="https://hex.pm/packages/heroicons_render">
+    <img alt="Hex Version" src="https://img.shields.io/hexpm/v/heroicons_render.svg">
+  </a>
+  <a href="https://hexdocs.pm/heroicons_render">
+    <img alt="Hex Docs" src="https://img.shields.io/hexpm/dt/heroicons_render.svg?style=flat">
+  </a>
+  <a href="https://opensource.org/licenses/MIT" alt="MIT">
+    <img src="https://img.shields.io/badge/license-MIT-green" />
+  </a>
+</p>
   
 Heroicons Render is a modified version of the HeroiconsV1 from the wonderful Petal Components. This is to enable calling the render function from Petal Components with Heroicons version 2. You can use this library in conjuction with Petal Components and Heroicons.
 
