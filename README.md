@@ -1,11 +1,11 @@
-<p>
-  <img src="https://res.cloudinary.com/metamorphic/image/upload/v1664900186/Logo/MossPiglet_Horizontal_OnLight_zszpdn.png" alt="Moss Piglet logo">
-  <h1>Heroicons Render</h1>
+
+<img src="https://res.cloudinary.com/metamorphic/image/upload/v1664900186/Logo/MossPiglet_Horizontal_OnLight_zszpdn.png" alt="Moss Piglet logo" />
+
+## Heroicons Render
   
   <p>
     Heroicons Render is a modified version of the HeroiconsV1 from the wonderful Petal Components. This is to enable calling the render function from Petal Components with Heroicons version 2. You can use this library in conjuction with Petal Components and Heroicons.
   </p>
-</p>
 
 ## About the Petal Components library
 
