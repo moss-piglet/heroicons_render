@@ -1,5 +1,9 @@
 # Changelog
 
+### 0.1.1 - 2022-10-04
+
+- Update to LiveView 0.18
+
 ### 0.1.0 - 2022-10-04
 
 - Rename HeroiconsV2 to enable render function in Petal Components
