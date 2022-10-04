@@ -58,4 +58,25 @@ You can use the render function the same as you would in the Petal Components li
 <HeroiconsV2.Solid.render icon="document_text" />
 ```
 
+You may need to add the following to your Phoenix app:
+
+```elixir
+defmodule MyAppWeb do
+  ...
+  use PetalComponents
+  use HeroiconsRender # add this
+  ...
+end
+
+# In any files that has PetalComponents you might need to also add HeroiconsRender
+use PetalComponents
+use HeroiconsRender # add this
+```
+
+Then to call Heroicons version 2 icons, you can use the Heroicons library function call:
+
+```elixir
+<Heroicons.map outline class="some classes" />
+```
+
 This enables you to use the Petal Components library and Heroicons library and have your components use version 2 of Heroicons without conflict.
