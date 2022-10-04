@@ -1,6 +1,7 @@
 defmodule HeroiconsRender.HeroiconsTest do
   use ComponentCase
   alias HeroiconsRender.HeroiconsV2
+  import Phoenix.Component
 
   test "it renders heroicons solid icon and color correctly" do
     assigns = %{}
