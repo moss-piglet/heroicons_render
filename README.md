@@ -45,15 +45,13 @@ Petal stands for:
 * [Alpine JS](https://alpinejs.dev/) (optional)
 * [Live View (HEEX)](https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html)
 
-## Documentation
-
-### Dependencies
+## Dependencies
 
 This package requires [Live View 0.18](https://hex.pm/packages/phoenix_live_view) and [Phoenix 1.6](https://hex.pm/packages/phoenix).
 
 It also requires Elixir 1.12 to work. It is designed to supplement the [Petal Components](https://hex.pm/packages/petal_components) and [Heroicons](https://hex.pm/packages/heroicons) libraries. If you are are not using those libraries, then there is really no reason to use this. This library plugs a hole where you could not implement the icon `render` function from Petal Components with v2 Heroicons.
 
-### Install
+## Install
 
 **Recommended**
 
@@ -83,7 +81,7 @@ defp deps do
 end
 ```
 
-### Usage
+## Usage
 
 You can use the render function the same as you would in the Petal Components library, e.g. by calling:
 
