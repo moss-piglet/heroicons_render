@@ -7,8 +7,11 @@
   <a href="https://hex.pm/packages/heroicons_render">
     <img alt="Hex Version" src="https://img.shields.io/hexpm/v/heroicons_render.svg">
   </a>
+  <a href="https://hex.pm/packages/heroicons_render">
+    <img alt="Hex Downloads" src="https://img.shields.io/hexpm/dt/heroicons_render.svg?style=flat">
+  </a>
   <a href="https://hexdocs.pm/heroicons_render">
-    <img alt="Hex Docs" src="https://img.shields.io/hexpm/dt/heroicons_render.svg?style=flat">
+    <img alt="Hex Docs" src="https://img.shields.io/badge/hex-docs-green.svg?style=flat">
   </a>
   <a href="https://opensource.org/licenses/MIT" alt="MIT">
     <img src="https://img.shields.io/badge/license-MIT-green" />
