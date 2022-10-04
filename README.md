@@ -1,6 +1,5 @@
-![Moss Piglet icon logo](logo.png)
 <p align="center">
-  
+  <img src="https://res.cloudinary.com/metamorphic/image/upload/v1664900186/Logo/MossPiglet_Horizontal_OnLight_zszpdn.png" alt="Moss Piglet logo">
   <h1 align="center">Heroicons Render</h1>
   
   <p align="center">
