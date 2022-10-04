@@ -3,9 +3,7 @@
 
 ## Heroicons Render
   
-  <p>
-    Heroicons Render is a modified version of the HeroiconsV1 from the wonderful Petal Components. This is to enable calling the render function from Petal Components with Heroicons version 2. You can use this library in conjuction with Petal Components and Heroicons.
-  </p>
+Heroicons Render is a modified version of the HeroiconsV1 from the wonderful Petal Components. This is to enable calling the render function from Petal Components with Heroicons version 2. You can use this library in conjuction with Petal Components and Heroicons.
 
 ## About the Petal Components library
 
