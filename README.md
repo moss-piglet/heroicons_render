@@ -57,7 +57,7 @@ It also requires Elixir 1.12 to work. It is designed to supplement the [Petal Co
 
 **Recommended**
 
-This package can be installed by adding `:pwned_coretheory` to your list of dependencies in `mix.exs`:
+This package can be installed by adding `:heroicons_render` to your list of dependencies in `mix.exs`:
 
 ```elixir
 defp deps do
