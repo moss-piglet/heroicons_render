@@ -3,6 +3,7 @@
 ### 0.1.1 - 2022-10-04
 
 - Update to LiveView 0.18
+- Update Readme
 
 ### 0.1.0 - 2022-10-04
 

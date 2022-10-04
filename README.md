@@ -47,6 +47,44 @@ Petal stands for:
 
 ## Documentation
 
+### Dependencies
+
+This package requires [Live View 0.18](https://hex.pm/packages/phoenix_live_view) and [Phoenix 1.6](https://hex.pm/packages/phoenix).
+
+It also requires Elixir 1.12 to work. It is designed to supplement the [Petal Components](https://hex.pm/packages/petal_components) and [Heroicons](https://hex.pm/packages/heroicons) libraries. If you are are not using those libraries, then there is really no reason to use this. This library plugs a hole where you could not implement the icon `render` function from Petal Components with v2 Heroicons.
+
+### Install
+
+**Recommended**
+
+This package can be installed by adding `:pwned_coretheory` to your list of dependencies in `mix.exs`:
+
+```elixir
+defp deps do
+  [
+    ...
+    {:heroicons_render, "~> 0.1.1"},
+  ]
+end
+```
+
+Then, run `mix deps.get`. Additionally, run `mix deps.update heroicons_render` occasionally to ensure you have the latest release.
+
+**Running on main**
+
+If you would like to run on the main branch, then update your dependencies as such:
+
+```elixir
+defp deps do
+  [
+    ...
+    {:heroicons_render, github: "/moss-piglet/heroicons_render"},
+  ]
+end
+```
+
+### Usage
+
 You can use the render function the same as you would in the Petal Components library, e.g. by calling:
 
 ```elixir
