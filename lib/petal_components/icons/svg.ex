@@ -1,4 +1,4 @@
-defmodule PetalComponents.Svg do
+defmodule HeroiconsRender.Svg do
   @moduledoc """
   SVG helper components.
   """

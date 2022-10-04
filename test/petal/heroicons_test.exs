@@ -1,13 +1,13 @@
-defmodule PetalComponents.HeroiconsTest do
+defmodule HeroiconsRender.HeroiconsTest do
   use ComponentCase
-  alias PetalComponents.Heroicons
+  alias HeroiconsRender.HeroiconsV2
 
   test "it renders heroicons solid icon and color correctly" do
     assigns = %{}
 
     html =
       rendered_to_string(~H"""
-      <Heroicons.Solid.home />
+      <HeroiconsV2.Solid.home />
       """)
 
     assert html =~ "<svg class="
@@ -19,7 +19,7 @@ defmodule PetalComponents.HeroiconsTest do
 
     html =
       rendered_to_string(~H"""
-      <Heroicons.Solid.render icon="document_text" />
+      <HeroiconsV2.Solid.render icon="document_text" />
       """)
 
     assert html =~ "<svg class="
@@ -27,7 +27,7 @@ defmodule PetalComponents.HeroiconsTest do
 
     also_html =
       rendered_to_string(~H"""
-      <Heroicons.Solid.render icon={:document_text} />
+      <HeroiconsV2.Solid.render icon={:document_text} />
       """)
 
     assert also_html == html
@@ -40,7 +40,7 @@ defmodule PetalComponents.HeroiconsTest do
 
     html =
       rendered_to_string(~H"""
-      <Heroicons.Solid.render icon="document-text" />
+      <HeroiconsV2.Solid.render icon="document-text" />
       """)
 
     assert html =~ "<svg class="
@@ -52,7 +52,7 @@ defmodule PetalComponents.HeroiconsTest do
 
     html =
       rendered_to_string(~H"""
-      <Heroicons.Mini.Solid.home />
+      <HeroiconsV2.Mini.Solid.home />
       """)
 
     assert html =~ "<svg class="
@@ -64,7 +64,7 @@ defmodule PetalComponents.HeroiconsTest do
 
     html =
       rendered_to_string(~H"""
-      <Heroicons.Mini.Solid.render icon="document_text" />
+      <HeroiconsV2.Mini.Solid.render icon="document_text" />
       """)
 
     assert html =~ "<svg class="
@@ -72,7 +72,7 @@ defmodule PetalComponents.HeroiconsTest do
 
     also_html =
       rendered_to_string(~H"""
-      <Heroicons.Mini.Solid.render icon={:document_text} />
+      <HeroiconsV2.Mini.Solid.render icon={:document_text} />
       """)
 
     assert also_html == html
@@ -85,7 +85,7 @@ defmodule PetalComponents.HeroiconsTest do
 
     html =
       rendered_to_string(~H"""
-      <Heroicons.Mini.Solid.render icon="document-text" />
+      <HeroiconsV2.Mini.Solid.render icon="document-text" />
       """)
 
     assert html =~ "<svg class="
@@ -97,7 +97,7 @@ defmodule PetalComponents.HeroiconsTest do
 
     html =
       rendered_to_string(~H"""
-      <Heroicons.Outline.home />
+      <HeroiconsV2.Outline.home />
       """)
 
     assert html =~ "<svg class="
@@ -109,7 +109,7 @@ defmodule PetalComponents.HeroiconsTest do
 
     html =
       rendered_to_string(~H"""
-      <Heroicons.Outline.render icon="document_text" />
+      <HeroiconsV2.Outline.render icon="document_text" />
       """)
 
     assert html =~ "<svg class="
@@ -117,7 +117,7 @@ defmodule PetalComponents.HeroiconsTest do
 
     also_html =
       rendered_to_string(~H"""
-      <Heroicons.Outline.render icon={:document_text} />
+      <HeroiconsV2.Outline.render icon={:document_text} />
       """)
 
     assert also_html == html
@@ -130,7 +130,7 @@ defmodule PetalComponents.HeroiconsTest do
 
     html =
       rendered_to_string(~H"""
-      <Heroicons.Outline.render icon="document-text" />
+      <HeroiconsV2.Outline.render icon="document-text" />
       """)
 
     assert html =~ "<svg class="
@@ -142,7 +142,7 @@ defmodule PetalComponents.HeroiconsTest do
 
     html =
       rendered_to_string(~H"""
-      <Heroicons.Outline.home blah="xxx" />
+      <HeroiconsV2.Outline.home blah="xxx" />
       """)
 
     assert html =~ "blah"
@@ -154,7 +154,7 @@ defmodule PetalComponents.HeroiconsTest do
 
     html =
       rendered_to_string(~H"""
-      <Heroicons.Outline.home title="foo" />
+      <HeroiconsV2.Outline.home title="foo" />
       """)
 
     assert html =~ "<title>foo</title>"
@@ -165,7 +165,7 @@ defmodule PetalComponents.HeroiconsTest do
 
     html =
       rendered_to_string(~H"""
-      <Heroicons.Solid.home title="foo" />
+      <HeroiconsV2.Solid.home title="foo" />
       """)
 
     assert html =~ "<title>foo</title>"

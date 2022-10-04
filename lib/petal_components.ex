@@ -1,9 +1,9 @@
-defmodule PetalComponents do
+defmodule HeroiconsRender do
   defmacro __using__(_) do
     quote do
-      alias PetalComponents.Heroicons
+      alias HeroiconsRender.HeroiconsV2
 
-      import PetalComponents.{
+      import HeroiconsRender.{
         Alert,
         Badge,
         Button,

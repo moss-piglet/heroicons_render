@@ -1,12 +1,12 @@
-defmodule PetalComponents.MixProject do
+defmodule HeroiconsRender.MixProject do
   use Mix.Project
 
-  @source_url "https://github.com/petalframework/petal_components"
-  @version "0.17.7"
+  @source_url "https://github.com/moss-piglet/heroicons_render"
+  @version "0.1.0"
 
   def project do
     [
-      app: :petal_components,
+      app: :heroicons_render,
       version: @version,
       elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -54,13 +54,13 @@ defmodule PetalComponents.MixProject do
 
   defp description() do
     """
-    Petal is a set of HEEX components that makes it easy for Phoenix developers to start building beautiful web apps.
+    Heroicons Render enables rendering V2 heroicons in conjuction with the wonderful Petal Components library.
     """
   end
 
   defp package do
     [
-      maintainers: ["Matt Platts", "Nic Hoban"],
+      maintainers: ["f0rest8"],
       licenses: ["MIT"],
       links: %{"GitHub" => @source_url}
     ]
@@ -70,9 +70,9 @@ defmodule PetalComponents.MixProject do
     [
       main: "readme",
       logo: "logo.png",
-      name: "Petal Components",
+      name: "Heroicons Render",
       source_ref: "v#{@version}",
-      canonical: "http://hexdocs.pm/petal_components",
+      canonical: "http://hexdocs.pm/heroicons_render",
       source_url: @source_url,
       extras: ["README.md"]
     ]

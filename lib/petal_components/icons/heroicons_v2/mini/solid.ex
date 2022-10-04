@@ -1,22 +1,22 @@
-defmodule PetalComponents.Heroicons.Mini.Solid do
+defmodule HeroiconsRender.HeroiconsV2.Mini.Solid do
   @moduledoc """
   Icon name can be the function or passed in as a type eg.
 
-      <PetalComponents.Heroicons.Solid.home class="w-6 h-6" />
-      <PetalComponents.Heroicons.Solid.home title="Optional title for accessibility" class="w-6 h-6" />
-      <PetalComponents.Heroicons.Solid.render icon="home" class="w-6 h-6" />
+      <HeroiconsRender.Heroicons.Solid.home class="w-6 h-6" />
+      <HeroiconsRender.Heroicons.Solid.home title="Optional title for accessibility" class="w-6 h-6" />
+      <HeroiconsRender.Heroicons.Solid.render icon="home" class="w-6 h-6" />
 
-      <PetalComponents.Heroicons.Mini.Solid.home class="w-5 h-5" />
-      <PetalComponents.Heroicons.Mini.Solid.home title="Optional title for accessibility" class="w-5 h-5" />
-      <PetalComponents.Heroicons.Mini.Solid.render icon="home" class="w-5 h-5" />
+      <HeroiconsRender.Heroicons.Mini.Solid.home class="w-5 h-5" />
+      <HeroiconsRender.Heroicons.Mini.Solid.home title="Optional title for accessibility" class="w-5 h-5" />
+      <HeroiconsRender.Heroicons.Mini.Solid.render icon="home" class="w-5 h-5" />
 
-      <PetalComponents.Heroicons.Outline.home class="w-6 h-6" />
-      <PetalComponents.Heroicons.Outline.home title="Optional title for accessibility" class="w-6 h-6" />
-      <PetalComponents.Heroicons.Outline.render icon="home" class="w-6 h-6" />
+      <HeroiconsRender.Heroicons.Outline.home class="w-6 h-6" />
+      <HeroiconsRender.Heroicons.Outline.home title="Optional title for accessibility" class="w-6 h-6" />
+      <HeroiconsRender.Heroicons.Outline.render icon="home" class="w-6 h-6" />
   """
   use Phoenix.Component
 
-  alias PetalComponents.Svg
+  alias HeroiconsRender.Svg
 
   def render(%{icon: icon_name} = assigns) when is_atom(icon_name) do
     apply(__MODULE__, icon_name, [assigns])
