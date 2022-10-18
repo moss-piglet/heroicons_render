@@ -1,5 +1,9 @@
 # Changelog
 
+### 0.1.2 - 2022-10-18
+
+- Update Phoenix to 1.6.14
+
 ### 0.1.1 - 2022-10-04
 
 - Update to LiveView 0.18
